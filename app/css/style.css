@@ -25,5 +25,83 @@ body {
 }
 
 h2 {
-    font-size: 48;
+    font-size: 28px;
+}
+
+.datetime {
+    padding: 9rem 7rem;
+}
+
+.dt-text {
+    font-size: 48px;
+}
+
+.usage {
+    padding: 7rem 5rem;
+}
+
+.usage-title {
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.progress-row {
+    display: flex;
+    flex-direction: row;
+}
+
+#cpu-percent, #gpu-percent, #ram-percent, #vram-percent {
+    margin-top: -0.2em;
+    padding-left: 1em;
+    flex-wrap: nowrap;
+}
+
+progress {
+    width: 65vw;
+}
+
+progress#cpu-usage-bar {
+    background: var(--green-color) !important;
+}
+
+#gpu-usage-bar {
+    background: var(--blue-color) !important;
+}
+
+#ram-usage-bar {
+    background: var(--orange-color);
+}
+
+#vram-usage-bar {
+    background: var(--purple-color);
+}
+
+.temps {
+    display: flex;
+    flex-direction: row;
+}
+
+.cpu-temp, .gpu-temp {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 5rem;
+}
+
+.temp-text-small {
+    font-size: 16px !important;
+}
+
+#cpu-temp, #gpu-temp {
+    font-size: 56px;
+    margin: 0.25rem;
+}
+
+#cpu-temp {
+    color: var(--green-color);
+}
+
+#gpu-temp {
+    color: var(--blue-color);
 }

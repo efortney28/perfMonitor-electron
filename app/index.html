@@ -16,48 +16,57 @@
     <div class="container">
 
       <div class="datetime">
-        <h2 id="date">Sunday, Oct 16</h2>
-        <h2 id="time">8:00 PM</h2>
+        <h2 class="dt-text" id="date">Sunday, Oct 16</h2>
+        <h2 class="dt-text" id="time">8:00 PM</h2>
       </div>
 
       <div class="usage">
 
         <div class="cpu">
-          <h2>CPU</h2>
-          <progress id="cpu-usage-bar" value="50" max="100"></progress>
-          <h3 id="cpu-percent">50%</h3>
+          <h2 class="usage-title">CPU</h2>
+          <div class="progress-row">
+            <progress id="cpu-usage-bar" value="50" max="100"></progress>
+            <h3 id="cpu-percent">50%</h3>
+          </div>
         </div>
         <div class="gpu">
-          <h2>GPU</h2>
-          <progress id="gpu-usage-bar" value="72" max="100"></progress>
-          <h3 id="gpu-percent">72%</h3>
+          <h2 class="usage-title">GPU</h2>
+          <div class="progress-row">
+            <progress id="gpu-usage-bar" value="72" max="100"></progress>
+            <h3 id="gpu-percent">72%</h3>
+          </div>
         </div>
         <div class="ram">
-          <h2>RAM</h2>
-          <h4 id="used-v-total-ram">6.88 GB / 16 GB</h4>
-          <progress id="ram-usage-bar" value="43" max="100"></progress>
-          <h3 id="ram-percent">43%</h3>
+          <h2 class="usage-title">RAM</h2>
+          <h4 class="usage-gb" id="used-v-total-ram">6.88 GB / 16 GB</h4>
+          <div class="progress-row">
+            <progress id="ram-usage-bar" value="43" max="100"></progress>
+            <h3 id="ram-percent">43%</h3>
+          </div>
         </div>
         <div class="vram">
-          <h2>VRAM</h2>
-          <h4 id="used-v-total-vram">7.44 GB / 8 GB</h4>
-          <progress id="vram-usage-bar" value="93" max="100"></progress>
-          <h3 id="vram-percent">93%</h3>
+          <h2 class="usage-title">VRAM</h2>
+          <h4 class="usage-gb" id="used-v-total-vram">7.44 GB / 8 GB</h4>
+          <div class="progress-row">
+            <progress id="vram-usage-bar" value="93" max="100"></progress>
+            <h3 id="vram-percent">93%</h3>
+          </div>
         </div>
       </div>
 
       <div class="temps">
 
         <div class="cpu-temp">
-          <h2>CPU <span class="temp-text-small">Temp &#176;C</span></h2>
+          <h2>CPU  <span class="temp-text-small">Temp &#176;C</span></h2>
           <h4 id="cpu-temp">42</h4>
         </div>
         <div class="gpu-temp">
-          <h2>GPU <span class="temp-text-small">Temp &#176;C</span></h2>
+          <h2>GPU  <span class="temp-text-small">Temp &#176;C</span></h2>
           <h4 id="gpu-temp">57</h4>
         </div>
 
       </div>
     </div>
+    <script src="js/monitor.js"></script>
   </body>
 </html>
