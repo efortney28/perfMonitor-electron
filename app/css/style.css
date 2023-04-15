@@ -58,22 +58,27 @@ h2 {
 
 progress {
     width: 65vw;
+    border-radius: 50%;
 }
 
 progress#cpu-usage-bar {
     background: var(--green-color) !important;
+    border-radius: 50%;
 }
 
 #gpu-usage-bar {
     background: var(--blue-color) !important;
+    border-radius: 50%;
 }
 
 #ram-usage-bar {
     background: var(--orange-color);
+    border-radius: 50%;
 }
 
 #vram-usage-bar {
     background: var(--purple-color);
+    border-radius: 50%;
 }
 
 .temps {
