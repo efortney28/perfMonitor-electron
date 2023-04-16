@@ -6,7 +6,7 @@ const cpu = osu.cpu
 const mem = osu.mem
 const os = osu.os
 
-setInterval(() => {
+const setValues = () => {
     cpu.usage().then((info) => {
         document.getElementById('cpu-usage-bar').setAttribute("value", info)
         document.getElementById('cpu-percent').innerText = Math.trunc(info) + ' %'
@@ -48,6 +48,12 @@ setInterval(() => {
     const localDate = new Date();
     document.getElementById('date').innerText = currDate.toString().slice(0, 11)
     document.getElementById('time').innerText = dateToTime(localDate)
+}
 
+// Set Initial Values
+setValues()
 
+// Keep it running
+setInterval(() => {
+    setValues()
 }, 3000)

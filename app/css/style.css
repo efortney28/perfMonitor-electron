@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;700&display=swap');
 
 :root {
     --main-bg-color: #181818;
@@ -10,7 +10,7 @@
     margin: 0;
     padding:0;
     color: var(--text-color);
-    font-family: 'Bebas Neue', sans-serif;
+    font-family: 'Montserrat', sans-serif;
 }
 
 body {
@@ -25,15 +25,18 @@ body {
 }
 
 h2 {
-    font-size: 28px;
+    font-size: 24px;
+    margin: 0 auto;
+    font-weight: 300;
 }
 
 .datetime {
-    padding: 9rem 7rem;
+    padding: 9rem 17rem 2rem 0rem;
 }
 
 .dt-text {
-    font-size: 48px;
+    font-size: 54px;
+    font-weight: 200;
 }
 
 .usage {
@@ -61,24 +64,40 @@ progress {
     border-radius: 50%;
 }
 
-progress#cpu-usage-bar {
-    background: var(--green-color) !important;
-    border-radius: 50%;
+#cpu-usage-bar::-webkit-progress-bar {
+    border-radius: 0.5rem;
 }
 
-#gpu-usage-bar {
-    background: var(--blue-color) !important;
-    border-radius: 50%;
+#cpu-usage-bar::-webkit-progress-value {
+    background: var(--green-color);
+    border-radius: 0.5rem;
 }
 
-#ram-usage-bar {
+#gpu-usage-bar::-webkit-progress-bar {
+    border-radius: 0.5rem;
+}
+
+#gpu-usage-bar::-webkit-progress-value {
+    background: var(--blue-color);
+    border-radius: 0.5rem;
+}
+
+#ram-usage-bar::-webkit-progress-bar {
+    border-radius: 0.5rem;
+}
+
+#ram-usage-bar::-webkit-progress-value {
     background: var(--orange-color);
-    border-radius: 50%;
+    border-radius: 0.5rem;
 }
 
-#vram-usage-bar {
+#vram-usage-bar::-webkit-progress-bar {
+    border-radius: 0.5rem;
+}
+
+#vram-usage-bar::-webkit-progress-value {
     background: var(--purple-color);
-    border-radius: 50%;
+    border-radius: 0.5rem;
 }
 
 .temps {
@@ -109,4 +128,22 @@ progress#cpu-usage-bar {
 
 #gpu-temp {
     color: var(--blue-color);
+}
+
+.usage-title {
+    margin: 0;
+}
+
+.usage-gb {
+    margin: 0.5rem 0;
+    padding-left: 0.5rem;
+    font-weight: 300;
+    font-size: 14px;
+}
+
+#ram-and-usage, #vram-and-usage {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
 }
